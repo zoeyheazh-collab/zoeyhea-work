@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoey Hea | 作品集 Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            scroll-behavior: smooth;
+        }
+        .hero-gradient {
+            background: linear-gradient(180deg, #FFFFFF 0%, #E6EEFF 100%);
+        }
+        .blue-section {
+            background-color: #2563EB;
+        }
+        .yellow-accent {
+            background-color: #FBBF24;
+        }
+        
+        /* 强化照片卡片的交互 */
+        .photo-card {
+            box-shadow: 20px 20px 60px rgba(0, 0, 0, 0.15), -5px -5px 20px rgba(255, 255, 255, 0.05);
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .photo-card:hover {
+            transform: rotate(0deg) scale(1.05);
+            box-shadow: 0px 30px 70px rgba(0, 0, 0, 0.25);
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+    <!-- 导航栏 -->
+    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-xl font-extrabold tracking-tighter text-blue-600">ZOEY HEA</div>
+            <div class="hidden md:flex space-x-8 text-sm font-medium uppercase tracking-widest">
+                <a href="#about" class="hover:text-blue-600 transition">About</a>
+                <a href="#projects" class="hover:text-blue-600 transition">Projects</a>
+                <a href="#journey" class="hover:text-blue-600 transition">Journey</a>
+                <a href="#contact" class="hover:text-blue-600 transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero 区域 -->
+    <header id="about" class="relative overflow-hidden hero-gradient pt-16 pb-24 md:pt-32 md:pb-40">
+        <!-- 装饰背景文字 -->
+        <div class="absolute top-10 left-1/2 -translate-x-1/2 opacity-5 select-none">
+            <h1 class="text-[12rem] font-black italic">ZOEY HEA</h1>
+        </div>
+
+        <div class="max-w-6xl mx-auto px-6 relative z-10 text-center">
+            <div class="mb-6 flex justify-center space-x-2">
+                <span class="px-4 py-1 rounded-full border border-pink-200 bg-pink-50 text-pink-500 text-xs font-bold">UI/UX</span>
+                <span class="px-4 py-1 rounded-full border border-yellow-200 bg-yellow-50 text-yellow-600 text-xs font-bold">Motion</span>
+                <span class="px-4 py-1 rounded-full border border-green-200 bg-green-50 text-green-600 text-xs font-bold">Graphic</span>
+                <span class="px-4 py-1 rounded-full border border-purple-200 bg-purple-50 text-purple-600 text-xs font-bold">Packaging</span>
+            </div>
+            <h2 class="text-6xl md:text-8xl font-black mb-8 tracking-tight uppercase">Port<span class="text-blue-600">folio</span></h2>
+            
+            <!-- 个人介绍卡片区域 -->
+            <div class="mt-20 blue-section rounded-[2.5rem] p-8 md:p-14 text-white flex flex-col md:flex-row items-center gap-12 shadow-2xl relative">
+                <!-- 浮动装饰元素 -->
+                <div class="absolute -top-10 -right-10 w-32 h-32 bg-yellow-400 rounded-full hidden md:block opacity-20 blur-3xl"></div>
+                
+                <!-- 重点优化的照片卡片 -->
+                <div class="photo-card w-72 h-[22rem] bg-white p-4 pb-12 rounded-lg transform -rotate-3 flex-shrink-0 cursor-pointer group">
+                    <div class="w-full h-full overflow-hidden bg-gray-200 rounded-sm">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=600" alt="Zoey Hea" class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-500">
+                    </div>
+                    <!-- 拍立得底部的文字 -->
+                    <div class="mt-4 text-center">
+                        <p class="text-blue-900 font-black tracking-widest text-lg">ZOEY HEA</p>
+                        <p class="text-blue-400 text-[10px] font-bold uppercase">Creative Designer</p>
+                    </div>
+                </div>
+                
+                <div class="text-left flex-1">
+                    <h3 class="text-4xl font-black mb-6 text-yellow-400 italic">Hi I am Zoey Hea</h3>
+                    <p class="text-blue-50 leading-relaxed text-xl opacity-90 mb-10 font-light">
+                        我是一名充满热情的视觉设计师，专注于创造平衡美感与功能的数字体验。擅长将复杂的逻辑转化为简洁、动人的视觉语言。无论是交互设计还是动态视觉，我始终追求极致的用户体验。
+                    </p>
+                    <div class="flex flex-col sm:flex-row sm:items-center gap-6">
+                        <span class="font-bold text-sm tracking-widest uppercase text-yellow-400">Software Skill</span>
+                        <div class="flex flex-wrap gap-3">
+                            <div class="w-11 h-11 rounded-xl bg-white/10 hover:bg-white/20 border border-white/10 flex items-center justify-center transition" title="Ai"><i data-lucide="pen-tool" class="w-5 h-5"></i></div>
+                            <div class="w-11 h-11 rounded-xl bg-white/10 hover:bg-white/20 border border-white/10 flex items-center justify-center transition" title="Ps"><i data-lucide="image" class="w-5 h-5"></i></div>
+                            <div class="w-11 h-11 rounded-xl bg-white/10 hover:bg-white/20 border border-white/10 flex items-center justify-center transition" title="Figma"><i data-lucide="layout" class="w-5 h-5"></i></div>
+                            <div class="w-11 h-11 rounded-xl bg-white/10 hover:bg-white/20 border border-white/10 flex items-center justify-center transition" title="Ae"><i data-lucide="play-circle" class="w-5 h-5"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 项目分类导航 -->
+    <div class="yellow-accent py-5 sticky top-[73px] z-40 shadow-md overflow-x-auto">
+        <div class="max-w-6xl mx-auto px-6 flex justify-center space-x-12 whitespace-nowrap">
+            <a href="#uiux" class="text-sm font-black text-yellow-900 hover:text-white transition-colors">UI UX | Project</a>
+            <a href="#motion" class="text-sm font-black text-yellow-900 hover:text-white transition-colors">Motion Graphic</a>
+            <a href="#graphic" class="text-sm font-black text-yellow-900 hover:text-white transition-colors">Graphic Design</a>
+            <a href="#packaging" class="text-sm font-black text-yellow-900 hover:text-white transition-colors">Packaging Design</a>
+        </div>
+    </div>
+
+    <!-- 作品展示区域 -->
+    <main id="projects" class="max-w-6xl mx-auto px-6 py-24 space-y-32">
+        
+        <!-- UI UX Section -->
+        <section id="uiux">
+            <h2 class="text-4xl font-black text-blue-600 mb-12 flex items-center gap-4">
+                UI UX | Project
+                <span class="h-1.5 w-24 bg-blue-600 rounded-full"></span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 group border border-gray-100">
+                    <div class="aspect-[4/3] bg-gray-100 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                    </div>
+                    <div class="p-8">
+                        <h4 class="font-black text-xl mb-2 italic">AI 学习助手</h4>
+                        <p class="text-gray-500 text-sm mb-6 leading-relaxed">基于生成式AI的个性化课程定制系统设计。</p>
+                        <button class="w-full bg-blue-600 text-white text-xs px-6 py-3 rounded-xl font-black tracking-widest hover:bg-blue-700 transition">VIEW PROJECT</button>
+                    </div>
+                </div>
+                <!-- 更多卡片保持一致... -->
+                <div class="bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 group border border-gray-100">
+                    <div class="aspect-[4/3] bg-gray-100 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                    </div>
+                    <div class="p-8">
+                        <h4 class="font-black text-xl mb-2 italic">二手车平台</h4>
+                        <p class="text-gray-500 text-sm mb-6 leading-relaxed">重构信任体系，提升30%的线上撮合效率。</p>
+                        <button class="w-full bg-blue-600 text-white text-xs px-6 py-3 rounded-xl font-black tracking-widest hover:bg-blue-700 transition">VIEW PROJECT</button>
+                    </div>
+                </div>
+                <div class="bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 group border border-gray-100">
+                    <div class="aspect-[4/3] bg-gray-100 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                    </div>
+                    <div class="p-8">
+                        <h4 class="font-black text-xl mb-2 italic">运动健康后台</h4>
+                        <p class="text-gray-500 text-sm mb-6 leading-relaxed">实时监测与异常预警的高频交互看板。</p>
+                        <button class="w-full bg-blue-600 text-white text-xs px-6 py-3 rounded-xl font-black tracking-widest hover:bg-blue-700 transition">VIEW PROJECT</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Motion Section -->
+        <section id="motion">
+            <h2 class="text-4xl font-black text-blue-600 mb-12 flex items-center gap-4">
+                Motion Graphic | Project
+                <span class="h-1.5 w-24 bg-blue-600 rounded-full"></span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="group relative bg-blue-600 rounded-[2rem] aspect-square flex flex-col items-center justify-center text-white overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-400 to-transparent opacity-0 group-hover:opacity-40 transition-opacity duration-500"></div>
+                    <h3 class="text-7xl font-black mb-2 transform group-hover:scale-110 transition duration-500">BIG</h3>
+                    <p class="text-xs font-bold tracking-[0.4em] uppercase opacity-60 mb-8">Brand Identity</p>
+                    <button class="bg-white text-blue-600 text-[10px] px-8 py-3 rounded-full font-black tracking-widest hover:scale-105 transition">WATCH REEL</button>
+                </div>
+                <!-- 重复运动图形占位符以对齐稿件 -->
+                <div class="group relative bg-blue-500 rounded-[2rem] aspect-square flex flex-col items-center justify-center text-white overflow-hidden">
+                    <h3 class="text-7xl font-black mb-2">BIG</h3>
+                    <p class="text-xs font-bold tracking-[0.4em] uppercase opacity-60 mb-8">Concept Motion</p>
+                    <button class="bg-white text-blue-600 text-[10px] px-8 py-3 rounded-full font-black tracking-widest hover:scale-105 transition">WATCH REEL</button>
+                </div>
+                <div class="group relative bg-blue-400 rounded-[2rem] aspect-square flex flex-col items-center justify-center text-white overflow-hidden">
+                    <h3 class="text-7xl font-black mb-2">BIG</h3>
+                    <p class="text-xs font-bold tracking-[0.4em] uppercase opacity-60 mb-8">Visual Story</p>
+                    <button class="bg-white text-blue-600 text-[10px] px-8 py-3 rounded-full font-black tracking-widest hover:scale-105 transition">WATCH REEL</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 经历区域 -->
+    <section id="journey" class="bg-white py-32 border-t border-gray-100">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="text-5xl font-black italic mb-2 uppercase">My <span class="text-yellow-400 underline decoration-blue-600 decoration-4 underline-offset-8">Academic</span> and</h2>
+                <h2 class="text-5xl font-black text-blue-600 italic uppercase">Professional <span class="text-blue-600">Journey</span></h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-10">
+                <div class="blue-section rounded-[2.5rem] p-12 text-white shadow-xl relative overflow-hidden group">
+                    <div class="absolute -top-10 -right-10 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
+                        <i data-lucide="briefcase" class="w-48 h-48"></i>
+                    </div>
+                    <h3 class="text-3xl font-black mb-10 flex items-center gap-4">
+                        <span class="w-10 h-10 yellow-accent rounded-xl flex items-center justify-center text-blue-900 italic font-black">W</span>
+                        Experience
+                    </h3>
+                    <div class="space-y-10 border-l-2 border-white/20 pl-8 ml-5 relative z-10">
+                        <div class="relative">
+                            <div class="absolute -left-[41px] top-1.5 w-4 h-4 rounded-full bg-yellow-400 border-4 border-blue-600"></div>
+                            <p class="text-yellow-400 font-black text-lg mb-1">Senior Designer</p>
+                            <p class="text-xs uppercase tracking-widest opacity-60 mb-2">2022 - PRESENT | CREATIVE AGENCY</p>
+                            <p class="text-blue-100 text-sm font-light">负责品牌视觉系统的整体把控与动态规范制定。</p>
+                        </div>
+                        <div class="relative">
+                            <div class="absolute -left-[41px] top-1.5 w-4 h-4 rounded-full bg-white/40 border-4 border-blue-600"></div>
+                            <p class="text-white font-black text-lg mb-1">Junior Designer</p>
+                            <p class="text-xs uppercase tracking-widest opacity-60 mb-2">2020 - 2022 | TECH STUDIO</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 rounded-[2.5rem] p-12 shadow-inner border border-gray-100 relative overflow-hidden group">
+                    <div class="absolute -top-10 -right-10 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
+                        <i data-lucide="graduation-cap" class="w-48 h-48 text-blue-600"></i>
+                    </div>
+                    <h3 class="text-3xl font-black mb-10 flex items-center gap-4">
+                        <span class="w-10 h-10 yellow-accent rounded-xl flex items-center justify-center text-blue-900 italic font-black">E</span>
+                        Education
+                    </h3>
+                    <div class="space-y-10 border-l-2 border-blue-600/10 pl-8 ml-5 relative z-10">
+                        <div class="relative">
+                            <div class="absolute -left-[41px] top-1.5 w-4 h-4 rounded-full bg-blue-600"></div>
+                            <p class="text-blue-600 font-black text-lg mb-1">Visual Communication</p>
+                            <p class="text-xs uppercase tracking-widest text-gray-400">2016 - 2020 | ART ACADEMY</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer id="contact" class="bg-gray-50 py-32 text-center border-t border-gray-100">
+        <h2 class="text-6xl md:text-9xl font-black text-gray-200 tracking-tighter mb-16 select-none">THANK YOU FOR<br>SCROLLING</h2>
+        <div class="flex justify-center space-x-8">
+            <a href="mailto:hello@zoeyhea.com" class="w-14 h-14 rounded-2xl bg-white shadow-lg text-blue-600 flex items-center justify-center hover:-translate-y-2 transition-all duration-300"><i data-lucide="mail"></i></a>
+            <a href="#" class="w-14 h-14 rounded-2xl bg-white shadow-lg text-blue-600 flex items-center justify-center hover:-translate-y-2 transition-all duration-300"><i data-lucide="instagram"></i></a>
+            <a href="#" class="w-14 h-14 rounded-2xl bg-white shadow-lg text-blue-600 flex items-center justify-center hover:-translate-y-2 transition-all duration-300"><i data-lucide="linkedin"></i></a>
+        </div>
+        <p class="mt-12 text-[10px] text-gray-400 uppercase tracking-[0.5em] font-bold">© 2024 Zoey Hea • Based in Kuala Lumpur</p>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        // 增强的进入滚动动画
+        const observerOptions = {
+            threshold: 0.15
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = "1";
+                    entry.target.style.transform = "translateY(0)";
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section, header > div').forEach(el => {
+            el.style.opacity = "0";
+            el.style.transform = "translateY(40px)";
+            el.style.transition = "all 0.8s cubic-bezier(0.22, 1, 0.36, 1)";
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
